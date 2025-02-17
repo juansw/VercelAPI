@@ -1,5 +1,4 @@
 import express from "express";
-import fetch from "node-fetch"; // Only needed for Node.js < 18
 import path from "path";
 
 const app = express();
