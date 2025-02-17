@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
-  if (req.method === "GET") {
+  /*if (req.method === "GET") {
     return res.json({ message: "API funcionando correctamente" });
-  }
+  }*/
 
   if (req.method === "POST") {
     try {
