@@ -1,15 +1,15 @@
 import express from "express";
-import fetch from 'node-fetch';
+import fetch from "node-fetch"; // Only needed for Node.js < 18
 import path from "path";
 
-//const app = express();
+const app = express();
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello, Vercel!');
+app.get("/", (req, res) => {
+  res.send("Hello, Vercel!");
 });
 
-app.post('/api', async (req, res) => {
+app.post("/api", async (req, res) => {
   try {
     const apiResponse = await fetch("https://apim.workato.com/api_ferco/searchi-v1/search");
     const data = await apiResponse.json();
@@ -20,5 +20,6 @@ app.post('/api', async (req, res) => {
   }
 });
 
-// Export the Express app for Vercel to use
-//module.exports = app;
+// Export properly for ESM
+export default app;
+
