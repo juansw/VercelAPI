@@ -1,5 +1,4 @@
 import express from "express";
-import path from "path";
 
 const app = express();
 app.use(express.json());
@@ -19,6 +18,5 @@ app.post("/api", async (req, res) => {
   }
 });
 
-// Export properly for ESM
+// Correct export for Vercel
 export default app;
-
