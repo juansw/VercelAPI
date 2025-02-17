@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   res.send('Hello, Vercel!');
 });
 
-app.post('/api', (req, res) => {
+app.get('/api', (req, res) => {
   //res.json({ message: 'This is an API endpoint' });
   try {
         const apiResponse = await fetch('https://apim.workato.com/api_ferco/searchi-v1/search', {
