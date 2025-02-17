@@ -2,7 +2,7 @@ import express from "express";
 import fetch from 'node-fetch';
 import path from "path";
 
-const app = express();
+//const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -21,4 +21,4 @@ app.post('/api', async (req, res) => {
 });
 
 // Export the Express app for Vercel to use
-module.exports = app;
+//module.exports = app;
